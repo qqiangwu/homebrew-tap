@@ -1,10 +1,18 @@
-# Qqiangwu Tap
+# Intro
+Brew tap for [cppship](https://github.com/qqiangwu/cppship), a cargo-like cpp build tool.
 
-## How do I install these formulae?
+I'm trying to contribute cppship to homebrew-core, but it **requires some stars**, [helps are welcomed](https://github.com/qqiangwu/cppship).
 
-`brew install qqiangwu/tap/<formula>`
+## Installation without tap
+```bash
+$ brew install qqiangwu/tap/cppship
+```
 
-Or `brew tap qqiangwu/tap` and then `brew install <formula>`.
+## Installation using tap
+```bash
+$ brew tap qqiangwu/tap
+$ brew install cppship
+```
 
 ## Documentation
 
