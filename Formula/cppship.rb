@@ -10,6 +10,12 @@ class Cppship < Formula
   depends_on "cmake"
   depends_on "conan"
 
+  bottle do
+    root_url "https://ghcr.io/v2/qqiangwu/tap"
+    sha256 cellar: :any_skip_relocation, monterey:     "4ec4d6c3b55cb5cd81d9ccfba7f44f1f3ad7df95332481070550743ee7b55e2c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ebe5556085fe106d52b1e9d4609f99f234db12ab0c9e962f252d77bb2d824157"
+  end
+
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
