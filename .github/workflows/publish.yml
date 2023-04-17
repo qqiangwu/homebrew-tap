@@ -11,10 +11,16 @@ jobs:
       image: ghcr.io/homebrew/ubuntu22.04:master
     steps:
       - name: Set up Homebrew
+        id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
 
-      - name: Set up git
+      - name: Configure Git user
+        id: git-user-config
         uses: Homebrew/actions/git-user-config@master
+        with:
+          username: BrewTestBot
 
       - name: Pull bottles
         env:
@@ -22,15 +28,17 @@ jobs:
           HOMEBREW_GITHUB_PACKAGES_TOKEN: ${{ github.token }}
           HOMEBREW_GITHUB_PACKAGES_USER: ${{ github.actor }}
           PULL_REQUEST: ${{ github.event.pull_request.number }}
-        run: |
-          brew tap homebrew/core
-          brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST
+        run: brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
         with:
           token: ${{ github.token }}
+          directory: ${{steps.set-up-homebrew.outputs.repository-path}}
           branch: main
+        env:
+          GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
+          GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
 
       - name: Delete branch
         if: github.event.pull_request.head.repo.fork == false
