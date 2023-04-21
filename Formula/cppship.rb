@@ -8,8 +8,8 @@ class Cppship < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/qqiangwu/tap"
-    sha256 cellar: :any_skip_relocation, monterey:     "8f48231c6c064582a07459026015ba41fe4f4ac7636fed7df275b6e0cf3f811e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "7114de3de7dae8c1ff8d948f6cf81efea577f91b73947fe964717fdc19852482"
+    sha256 cellar: :any_skip_relocation, monterey:     "c858863804b84ec6f5ca314736b18c4bf1bdacd4ac08ab34392b028a009529e6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "70c5eca1efc2f0a7097406fceedb8d95b9c174e1e5f2042288dbe70e4ac16eb1"
   end
 
   depends_on "cmake"
