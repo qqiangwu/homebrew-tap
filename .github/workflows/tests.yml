@@ -49,5 +49,5 @@ jobs:
         uses: actions/checkout@v3
       - name: "Add Label"
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.PR_PULL_TOKEN }}
         run: gh pr edit "$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')" --add-label "pr-pull"
