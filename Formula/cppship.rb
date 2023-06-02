@@ -1,8 +1,8 @@
 class Cppship < Formula
   desc "Cargo-like c++ build tool based on conan2 and cmake"
   homepage "https://github.com/qqiangwu/cppship"
-  url "https://github.com/qqiangwu/cppship/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "8e889b5d8d42b9b026494a7f92d5fe8325c22ab562639704603a8a2f4e5b957d"
+  url "https://github.com/qqiangwu/cppship/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "20d5b27ca25b9c2c8fb6e324549e540a12e2beeb854b2ede820d89536852554c"
   license "BSL-1.0"
   head "https://github.com/qqiangwu/cppship.git", branch: "main"
 
