@@ -8,10 +8,10 @@ class Cppship < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/qqiangwu/tap"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4eadf72c49e8c7b9d15e2c6c9745c4e99f9a6090a27c0575b20ab37a41d2350e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c8b113f7c52b7eeeb6f434761fbc138ba78170e797f6fe1db1f8c543bf7f47e1"
-    sha256 cellar: :any_skip_relocation, ventura:       "b8dbb2a0bbdb7fc8edbe212f4a2486b5eb0c5c662fb3fece3673c8dcb9eb496f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fdecacc1e404d520d3d85bf5914684a8d2c4e2ca5cc0881fc653119906415bc6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "620ab52ab348dbaa4f2d4bb1ee1a26dfba03d005bc496a6fa680a1952ea629e3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cfae6335c805ff107d1288b31cce7dffc73767277265b0b5d2e909b291a8d63c"
+    sha256 cellar: :any_skip_relocation, ventura:       "05de64623b1d9e4204a32d62842759a65ccf5a3d38b34fd115d47a0a807deeb3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "60c02f3db2be218079107ab9dfc3b0cc6f2611e2c4f80ea69c0b19b6f343e6ea"
   end
 
   depends_on "cmake"
